@@ -1,12 +1,12 @@
 <#include "../layout/layout.ftl">
-<@html page_title="角色添加" page_tab="auth_role">
+<@html page_title="Ajouter" page_tab="auth_role">
     <section class="content-header">
         <h1>
             Role
-            <small>添加</small>
+            <small>Ajouter</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="/admin/index"><i class="fa fa-dashboard"></i> Accueil</a></li>
+            <li><a href="/admin/index"><i class="fa fa-dashboard"></i> Accueil </a></li>
             <li><a href="/admin/role/list">Role</a></li>
             <li class="active">Ajouter</li>
         </ol>

@@ -1,5 +1,5 @@
 <#include "../layout/layout.ftl">
-<@html page_title="权限列表" page_tab="auth_permission">
+<@html page_title="Permission" page_tab="auth_permission">
     <section class="content-header">
         <h1>
             Permission

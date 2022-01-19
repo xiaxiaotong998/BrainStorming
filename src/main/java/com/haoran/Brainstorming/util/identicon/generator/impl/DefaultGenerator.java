@@ -23,7 +23,7 @@ public class DefaultGenerator implements IBaseGenerator {
 
         boolean[][] array = new boolean[6][5];
 
-        //初始化字符串
+
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 5; j++) {
                 array[i][j] = false;
@@ -31,7 +31,7 @@ public class DefaultGenerator implements IBaseGenerator {
         }
 
         for (int i = 0; i < hash.length(); i += 2) {
-            int s = i / 2; //只取hash字符串偶数编号（从0开始）的字符
+            int s = i / 2;
 
             boolean v = DoubleMath.roundToInt(Integer.parseInt(hash.charAt(i) + "", 16) / 10.0, RoundingMode.HALF_UP) > 0 ?
                     true : false;
@@ -53,22 +53,11 @@ public class DefaultGenerator implements IBaseGenerator {
 
     @Override
     public Color getBackgroundColor() {
-        //        int r = Integer.parseInt(String.valueOf(this.hash.charAt(0)), 16) * 16;
-        //        int g = Integer.parseInt(String.valueOf(this.hash.charAt(1)), 16) * 16;
-        //        int b = Integer.parseInt(String.valueOf(this.hash.charAt(2)), 16) * 16;
-
-        //        return new Color(r, g, b);
         return new Color(236, 236, 236);
     }
 
     @Override
     public Color getForegroundColor() {
-        //        int r = Integer.parseInt(String.valueOf(hash.charAt(hash.length() - 1)), 16) * 16;
-        //        int g = Integer.parseInt(String.valueOf(hash.charAt(hash.length() - 2)), 16) * 16;
-        //        int b = Integer.parseInt(String.valueOf(hash.charAt(hash.length() - 3)), 16) * 16;
-        //
-        //        return new Color(r, g, b);
-
         int r = random.nextInt(256);
         int g = random.nextInt(256);
         int b = random.nextInt(256);

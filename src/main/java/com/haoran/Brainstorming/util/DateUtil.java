@@ -69,7 +69,6 @@ public class DateUtil {
         return calendar.getTime();
     }
 
-    // 获取 hour 前的时间
     public static Date getHourBefore(Date date, int hour) {
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(date);

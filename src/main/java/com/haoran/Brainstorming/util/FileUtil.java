@@ -57,7 +57,6 @@ public class FileUtil {
     }
 
     /**
-     * 上传文件
      *
      * @param file
      * @param fileName

@@ -28,7 +28,7 @@
             <#nested />
         </div>
     </div>
-    <#include "footer.ftl"/>
+<#--    <#include "footer.ftl"/>-->
     <#include "../components/websocket.ftl"/>
     </body>
     </html>

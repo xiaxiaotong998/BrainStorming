@@ -1,22 +1,22 @@
 <#include "../layout/layout.ftl">
-<@html page_title="角色列表" page_tab="auth_role">
+<@html page_title="Role list" page_tab="auth_role">
     <section class="content-header">
         <h1>
             角色
             <small>列表</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="/admin/index"><i class="fa fa-dashboard"></i> 首页</a></li>
-            <li><a href="/admin/role/list">角色</a></li>
-            <li class="active">列表</li>
+            <li><a href="/admin/index"><i class="fa fa-dashboard"></i> Accueil </a></li>
+            <li><a href="/admin/role/list">Role</a></li>
+            <li class="active">List</li>
         </ol>
     </section>
     <section class="content">
         <div class="box box-info">
             <div class="box-header with-border">
-                <h3 class="box-title">角色列表</h3>
+                <h3 class="box-title">Role list</h3>
                 <#if sec.hasPermission('role:add')>
-                    <a href="/admin/role/add" class="btn btn-xs btn-primary pull-right">添加</a>
+                    <a href="/admin/role/add" class="btn btn-xs btn-primary pull-right">Ajouter</a>
                 </#if>
             </div>
             <!-- /.box-header -->
@@ -25,8 +25,8 @@
                     <thead>
                     <tr>
                         <th>#</th>
-                        <th>角色名称</th>
-                        <th>操作</th>
+                        <th>Role Name</th>
+                        <th>Opération</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -36,10 +36,10 @@
                             <td>${role.name!}</td>
                             <td>
                                 <#if sec.hasPermission('role:edit')>
-                                    <a href="/admin/role/edit?id=${role.id}" class="btn btn-xs btn-warning">编辑</a>
+                                    <a href="/admin/role/edit?id=${role.id}" class="btn btn-xs btn-warning">Editer</a>
                                 </#if>
                                 <#if sec.hasPermission('role:delete')>
-                                    <button onclick="deleteRole(${role.id})" class="btn btn-xs btn-danger">删除</button>
+                                    <button onclick="deleteRole(${role.id})" class="btn btn-xs btn-danger">Supprimer</button>
                                 </#if>
                             </td>
                         </tr>
@@ -53,10 +53,10 @@
         <#if sec.hasPermission('role:delete')>
 
         function deleteRole(id) {
-            if (confirm("确定要删除这个角色？")) {
+            if (confirm("Sûr？")) {
                 $.get("/admin/role/delete?id=" + id, function (data) {
                     if (data.code === 200) {
-                        toast("成功", "success");
+                        toast("success", "success");
                         setTimeout(function () {
                             window.location.reload();
                         }, 700);

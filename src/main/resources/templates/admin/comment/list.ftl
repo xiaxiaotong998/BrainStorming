@@ -1,5 +1,5 @@
 <#include "../layout/layout.ftl">
-<@html page_title="评论列表" page_tab="comment">
+<@html page_title="List" page_tab="comment">
     <section class="content-header">
         <h1>
             Comment
@@ -70,14 +70,14 @@
     <script>
         $(function () {
             $("#startDate").datepicker({
-                language: 'zh-CN',
+                language: 'en-US',
                 autoclose: true,
                 format: 'yyyy-mm-dd',
                 todayBtn: true,
                 todayHighlight: true,
             });
             $("#endDate").datepicker({
-                language: 'zh-CN',
+                language: 'en-US',
                 autoclose: true,
                 format: 'yyyy-mm-dd',
                 todayBtn: true,
@@ -90,7 +90,7 @@
             if (confirm('Vous êtes sûr?')) {
                 $.get("/admin/comment/delete?id=" + id, function (data) {
                     if (data.code === 200) {
-                        toast("成功", "success");
+                        toast("success", "success");
                         setTimeout(function () {
                             window.location.reload();
                         }, 700);

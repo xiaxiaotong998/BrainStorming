@@ -21,7 +21,6 @@ public class NotificationsDirective implements TemplateDirectiveModel {
             templateDirectiveBody) throws TemplateException, IOException {
         Integer userId = Integer.parseInt(map.get("userId").toString());
         Boolean read = Integer.parseInt(map.get("read").toString()) == 1;
-        // 如果想查询所有的消息，limit 传一个负数就可以了 比如 -1
         Integer limit = Integer.parseInt(map.get("limit").toString());
         List<Map<String, Object>> notifications = notificationService.selectByUserId(userId, read, limit);
         DefaultObjectWrapperBuilder builder = new DefaultObjectWrapperBuilder(Configuration.VERSION_2_3_28);

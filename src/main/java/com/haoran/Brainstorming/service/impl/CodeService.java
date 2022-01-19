@@ -1,6 +1,5 @@
 package com.haoran.Brainstorming.service.impl;
 
-import com.haoran.Brainstorming.config.service.SmsService;
 import com.haoran.Brainstorming.mapper.CodeMapper;
 import com.haoran.Brainstorming.model.Code;
 import com.haoran.Brainstorming.service.ICodeService;
@@ -21,9 +20,6 @@ public class CodeService implements ICodeService {
 
     @Resource
     private CodeMapper codeMapper;
-
-    @Resource
-    private SmsService smsService;
 
 
     private String generateToken() {

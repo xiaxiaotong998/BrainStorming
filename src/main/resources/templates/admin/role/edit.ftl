@@ -1,12 +1,12 @@
 <#include "../layout/layout.ftl">
-<@html page_title="角色编辑" page_tab="auth_role">
+<@html page_title="Editer" page_tab="auth_role">
     <section class="content-header">
         <h1>
             Role
             <small>Editer</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="/admin/index"><i class="fa fa-dashboard"></i> Accueil</a></li>
+            <li><a href="/admin/index"><i class="fa fa-dashboard"></i> Accueil </a></li>
             <li><a href="/admin/role/list">Role</a></li>
             <li class="active">Editer</li>
         </ol>

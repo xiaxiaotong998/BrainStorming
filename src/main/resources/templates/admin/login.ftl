@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>后台登录</title>
+    <title>Admin Login</title>
     <#--css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link rel="stylesheet"
@@ -41,22 +41,22 @@
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
-        <p class="login-box-msg">${site.name!} 管理平台登录</p>
+        <p class="login-box-msg">${site.name!} Login</p>
         <#if error??>
             <div class="text-red">${error!}</div>
         </#if>
         <form id="form" action="/admin/login" method="post">
             <div class="form-group has-feedback">
-                <input type="text" class="form-control" id="username" name="username" value="${username!}" placeholder="用户名">
+                <input type="text" class="form-control" id="username" name="username" value="${username!}">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="password" class="form-control" id="password" name="password" placeholder="密码">
+                <input type="password" class="form-control" id="password" name="password">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
             <div class="form-group">
                 <div class="input-group">
-                    <input type="text" class="form-control" id="code" name="code" placeholder="验证码"/>
+                    <input type="text" class="form-control" id="code" name="code"/>
                     <span class="input-group-btn">
                         <img style="border: 1px solid #ccc;" src="/common/captcha" id="changeCode"/>
                     </span>
@@ -64,11 +64,11 @@
             </div>
             <div class="row">
                 <div class="col-xs-8">
-                    <input type="checkbox" name="rememberMe" checked id="rememberMe" value="1"> <label for="rememberMe">记住我</label>
+                    <input type="checkbox" name="rememberMe" checked id="rememberMe" value="1"> <label for="rememberMe">Remember me</label>
                 </div>
                 <!-- /.col -->
                 <div class="col-xs-4">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat"><i class="fa fa-adminUser"></i> 登录</button>
+                    <button type="submit" class="btn btn-primary btn-block btn-flat"><i class="fa fa-adminUser"></i> Login </button>
                 </div>
                 <!-- /.col -->
             </div>

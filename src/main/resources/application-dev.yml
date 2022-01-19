@@ -3,8 +3,3 @@ site:
   datasource_url: jdbc:mysql://localhost:3306/pybbs?useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
   datasource_username: root
   datasource_password: xia3536
-
-# 想看mybatis执行的sql的时候，去掉下面这段的注释
-#mybatis-plus:
-#  configuration:
-#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

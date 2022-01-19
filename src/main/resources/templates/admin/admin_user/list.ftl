@@ -1,5 +1,5 @@
 <#include "../layout/layout.ftl">
-<@html page_title="用户列表" page_tab="auth_admin_user">
+<@html page_title="List" page_tab="auth_admin_user">
     <section class="content-header">
         <h1>
             Username

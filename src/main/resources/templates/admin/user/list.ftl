@@ -1,39 +1,38 @@
 <#include "../layout/layout.ftl"/>
-<@html page_title="用户" page_tab="user">
+<@html page_title="User" page_tab="user">
     <section class="content-header">
         <h1>
-            用户
-            <small>列表</small>
+            User
+            <small>List</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="/admin/index"><i class="fa fa-dashboard"></i> 首页</a></li>
-            <li><a href="/admin/user/list">用户</a></li>
-            <li class="active">列表</li>
+            <li><a href="/admin/index"><i class="fa fa-dashboard"></i> Accueil </a></li>
+            <li><a href="/admin/user/list">User</a></li>
+            <li class="active">List</li>
         </ol>
     </section>
     <section class="content">
         <div class="box box-info">
             <div class="box-header with-border">
-                <h3 class="box-title">用户列表</h3>
+                <h3 class="box-title">User List</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
                 <form action="/admin/user/list" class="form-inline">
                     <div class="form-group" style="margin-bottom: 10px;">
-                        <input type="text" id="username" name="username" value="${username!}" class="form-control"
-                               placeholder="用户名">
-                        <button type="submit" class="btn btn-primary btn-sm">搜索</button>
+                        <input type="text" id="username" name="username" value="${username!}" class="form-control">
+                        <button type="submit" class="btn btn-primary btn-sm">Rechercheer</button>
                     </div>
                 </form>
                 <table class="table table-bordered">
                     <thead>
                     <tr>
                         <th>#</th>
-                        <th>用户名</th>
-                        <th>邮箱</th>
-                        <th>积分</th>
-                        <th>时间</th>
-                        <th>操作</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Points</th>
+                        <th>Time</th>
+                        <th>Operation</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -46,10 +45,10 @@
                             <td>${user.inTime?datetime}</td>
                             <td>
                                 <#if sec.hasPermission("user:edit")>
-                                    <a href="/admin/user/edit?id=${user.id}" class="btn btn-xs btn-warning">编辑</a>
+                                    <a href="/admin/user/edit?id=${user.id}" class="btn btn-xs btn-warning">Editer</a>
                                 </#if>
                                 <#if sec.hasPermission("user:delete")>
-                                    <button onclick="deleteUser('${user.id}')" class="btn btn-xs btn-danger">删除</button>
+                                    <button onclick="deleteUser('${user.id}')" class="btn btn-xs btn-danger">Supprimer</button>
                                 </#if>
                             </td>
                         </tr>
@@ -65,10 +64,10 @@
         <#if sec.hasPermission("user:delete")>
 
         function deleteUser(id) {
-            if (confirm("确定要删除这个用户吗？\n 删除用户后，它发的帖子评论以及收藏就都没了，还请三思!!")) {
+            if (confirm("Sûr?")) {
                 $.get("/admin/user/delete?id=" + id, function (data) {
                     if (data.code === 200) {
-                        toast("删除成功", "success");
+                        toast("success", "success");
                         setTimeout(function () {
                             window.location.reload();
                         }, 700);

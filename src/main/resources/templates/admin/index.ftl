@@ -1,13 +1,13 @@
 <#include "./layout/layout.ftl"/>
-<@html page_title="首页" page_tab="index">
+<@html page_title="Accueil" page_tab="index">
     <section class="content-header">
         <h1>
-            首页
-            <small>仪表盘</small>
+            Accueil
+            <small>Dashboard</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="/admin/index"><i class="fa fa-dashboard"></i> 首页</a></li>
-            <li class="active">仪表盘</li>
+            <li><a href="/admin/index"><i class="fa fa-dashboard"></i> Accueil </a></li>
+            <li class="active">Dashboard</li>
         </ol>
     </section>
     <section class="content">
@@ -18,12 +18,12 @@
                     <div class="inner">
                         <h3>${topic_count!0}</h3>
 
-                        <p>今天新增话题数</p>
+                        <p>Number of topics added today</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-ios-list-outline"></i>
                     </div>
-                    <a href="/admin/topic/list" class="small-box-footer">更多 <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="/admin/topic/list" class="small-box-footer">More <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -33,12 +33,12 @@
                     <div class="inner">
                         <h3>${tag_count!0}</h3>
 
-                        <p>今天新增标签数</p>
+                        <p>Number of tags added today</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-pricetags"></i>
                     </div>
-                    <a href="/admin/tag/list" class="small-box-footer">更多 <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="/admin/tag/list" class="small-box-footer">More <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -48,12 +48,12 @@
                     <div class="inner">
                         <h3>${comment_count!0}</h3>
 
-                        <p>今天新增评论数</p>
+                        <p>Number of comments added today</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-chatboxes"></i>
                     </div>
-                    <a href="/admin/comment/list" class="small-box-footer">更多 <i
+                    <a href="/admin/comment/list" class="small-box-footer">More <i
                                 class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
@@ -64,12 +64,12 @@
                     <div class="inner">
                         <h3>${user_count!0}</h3>
 
-                        <p>今天新增用户数</p>
+                        <p>Number of users added today</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-person-add"></i>
                     </div>
-                    <a href="/admin/user/list" class="small-box-footer">更多 <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="/admin/user/list" class="small-box-footer">More <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -78,7 +78,7 @@
             <div class="col-lg-6">
                 <div class="box box-info">
                     <div class="box-header with-border">
-                        <h3 class="box-title">系统状态</h3>
+                        <h3 class="box-title">Status</h3>
 
                         <div class="box-tools pull-right">
                             <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
@@ -91,7 +91,7 @@
                         <table class="table no-margin">
                             <tbody>
                             <tr>
-                                <th width="140">内存</th>
+                                <th width="140">MemorySize</th>
                                 <td>
                                     <div class="progress">
                                         <div class="progress-bar progress-bar-info progress-bar-striped"
@@ -102,15 +102,15 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th>系统</th>
+                                <th>System</th>
                                 <td>${os_name}</td>
                             </tr>
                             <tr>
-                                <th>CPU使用率</th>
+                                <th>CpuLoad</th>
                                 <td>${(systemCpuLoad * 100)?string('#.##')}%</td>
                             </tr>
                             <tr>
-                                <th>JVM CPU使用率</th>
+                                <th>JVM CpuLoad</th>
                                 <td>${(processCpuLoad * 100)?string('#.##')}%</td>
                             </tr>
                             </tbody>

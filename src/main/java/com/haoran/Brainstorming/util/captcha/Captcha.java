@@ -8,7 +8,7 @@ import static com.haoran.Brainstorming.util.captcha.Randoms.num;
 
 public abstract class Captcha {
 
-    protected Font font = new Font("Verdana", Font.ITALIC | Font.BOLD, 28);   // 字体
+    protected Font font = new Font("Verdana", Font.ITALIC | Font.BOLD, 28);
     protected int len = 4;
     protected int width = 120;
     protected int height = 32;

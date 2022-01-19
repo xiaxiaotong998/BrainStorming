@@ -1,5 +1,5 @@
 <#include "../layout/layout.ftl">
-<@html page_title="用户编辑" page_tab="auth_admin_user">
+<@html page_title="Editer" page_tab="auth_admin_user">
     <section class="content-header">
         <h1>
             User

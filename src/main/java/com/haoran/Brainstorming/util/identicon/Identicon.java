@@ -42,7 +42,6 @@ public class Identicon {
 
         boolean[][] array = generator.getBooleanValueArray(hash);
 
-        //        int ratio = DoubleMath.roundToInt(size / 5.0, RoundingMode.HALF_UP);
         int ratio = size / 6;
 
         BufferedImage identicon = new BufferedImage(ratio * 6, ratio * 6, BufferedImage.TYPE_INT_ARGB);

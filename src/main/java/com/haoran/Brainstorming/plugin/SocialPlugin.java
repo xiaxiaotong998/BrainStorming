@@ -23,7 +23,7 @@ public class SocialPlugin {
     /**
      *
      *
-     * @param source 来源平台
+     * @param source
      * @return {@link AuthConfig}
      */
     private AuthConfig getConfig(String source) {
@@ -33,7 +33,7 @@ public class SocialPlugin {
         String callback = (String) config.get("oauth_" + source + "_callback_url");
 
         Assert.isTrue(!StringUtils.isEmpty(clientId) && !StringUtils.isEmpty(clientSecret) && !StringUtils.isEmpty
-                (callback), source + "登录还没有相关配置，联系站长吧！");
+                (callback), source + "config first");
 
         return AuthConfig.builder()
                 .clientId(clientId)
@@ -43,9 +43,9 @@ public class SocialPlugin {
     }
 
     /**
-     * 获取 JustAuth Request
+     * JustAuth Request
      *
-     * @param source 来源平台
+     * @param source
      * @return {@link AuthRequest}
      */
     public AuthRequest getRequest(String source) {
@@ -71,13 +71,13 @@ public class SocialPlugin {
                 break;
         }
         if (null == authRequest) {
-            throw new AuthException(source + "登录还没有相关配置，联系站长吧！");
+            throw new AuthException(source + "config first");
         }
         return authRequest;
     }
 
     /**
-     * 获取所有可用的社会化登录平台
+     *
      *
      * @return {@link List}
      */

@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import java.util.List;
 
 public interface IUserService {
+
     User selectByUsername(String username);
 
     User addUser(String username, String password, String avatar, String email, String bio, String website,

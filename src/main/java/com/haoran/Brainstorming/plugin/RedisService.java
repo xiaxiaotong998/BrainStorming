@@ -83,7 +83,7 @@ public class RedisService implements BaseService<JedisPool> {
                 .isEmpty(timeout);
     }
 
-    // 获取String值
+
     public String getString(String key) {
         JedisPool instance = this.instance();
         if (StringUtils.isEmpty(key) || instance == null) return null;
@@ -94,7 +94,7 @@ public class RedisService implements BaseService<JedisPool> {
     }
 
     public void setString(String key, String value) {
-        this.setString(key, value, 300); // 如果不指定过时时间，默认为5分钟
+        this.setString(key, value, 300);
     }
 
     /**

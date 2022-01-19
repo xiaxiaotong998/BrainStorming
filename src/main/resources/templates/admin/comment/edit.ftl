@@ -1,5 +1,5 @@
 <#include "../layout/layout.ftl">
-<@html page_title="评论编辑" page_tab="comment">
+<@html page_title="Editer" page_tab="comment">
     <section class="content-header">
         <h1>
             Comment
